@@ -1,0 +1,28 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 0 1.5em; /* left & right inner spacing */
+  display: flex;
+  justify-content: space-between; /* push left and right content apart */
+  align-items: center; /* vertically center items */
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+.nav-right {
+  text-align: center;
+}
+
+.nav-right p {
+  margin: 0;
+}
+
+.nav-right i {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.2em;
+}
