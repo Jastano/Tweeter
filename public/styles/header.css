@@ -1,0 +1,24 @@
+header {
+  width: 100%;
+  background-color: #ebcdcd;
+  background-image: url("/images/checkered-light-emboss.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+
+header img {
+  width: 120px;               /* adjust size as needed */
+  height: auto;
+  border-radius: 50%;         /* makes the avatar circular if it’s square */
+}
+
+header h2 {
+  margin: 20px 0 0;           /* space above, none below */
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.5em;
+  color: #333;                /* make it readable on your bg */
+}

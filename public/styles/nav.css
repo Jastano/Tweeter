@@ -1,20 +1,26 @@
 nav {
+  position: fixed;
+  top: 0;          /* stick to top of viewport */
+  left: 0;         /* align to left edge */
   height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 0 1.5em; /* left & right inner spacing */
+  padding: 0 1.5em; /* inner spacing left & right */
   display: flex;
-  justify-content: space-between; /* push left and right content apart */
+  justify-content: space-between; /* push left/right content apart */
   align-items: center; /* vertically center items */
+  z-index: 1000; /* optional: makes sure it stays above other elements */
 }
 
-nav span {
+.logo {
   font-family: 'Bungee', sans-serif;
 }
 
 .nav-right {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-right p {
@@ -22,7 +28,6 @@ nav span {
 }
 
 .nav-right i {
-  display: block;
   margin-top: 5px;
   font-size: 1.2em;
 }
