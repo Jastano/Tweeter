@@ -48,3 +48,22 @@
   color: #545149;
   font-family: 'Bungee', sans-serif;
 }
+
+.new-tweet button {
+  background-color: #1da1f2; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.new-tweet button:hover {
+  background-color: #0d8ddb;  /* darker when you hover */
+}
+
+/* Counter turns red when over limit */
+.new-tweet .counter.over-limit {
+  color: red;
+}
