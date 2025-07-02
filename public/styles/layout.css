@@ -36,5 +36,5 @@ body {
 main {
   width: 90%;                   /* 90% width of body */
   margin: 0 auto;               /* center horizontally */
-  background-color: #f4f1ec;    /* same as body background */
+  background-color: inherit;    /* same as body background */
 }
