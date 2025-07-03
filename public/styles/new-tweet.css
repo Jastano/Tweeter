@@ -3,7 +3,7 @@
   border: none; 
   padding: 1em;
   margin: 0 auto;
-  width: 90%; /* center by limiting width and using auto margins */
+  width: 90%; 
 }
 
 /* Heading */
@@ -50,7 +50,7 @@
 }
 
 .new-tweet button {
-  background-color: #1da1f2; 
+  background-color: #4056A1; 
   color: #fff;
   border: none;
   padding: 10px 20px;
