@@ -8,6 +8,31 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
+  // Show an error message
+  const showError = function(message) {
+    const $error = $(".error-message");
+    $error.text(message).slideDown();
+  };
+
+  // Hide the error message
+  const hideError = function() {
+    $(".error-message").slideUp();
+  };
+
+  // Validation function
+  const isTweetValid = function(tweetText) {
+    if (!tweetText.trim()) {
+      showError("⚠️ Tweet is  empty!");
+      return false;
+    }
+    if (tweetText.length > 140) {
+      showError("⚠️ Max 140 characters.");
+      return false;
+    }
+    hideError();
+    return true;
+  };
+
   // Build a tweet 
   const createTweetElement = function (tweet) {
     const $tweet = $(`
@@ -36,7 +61,7 @@ $(document).ready(function () {
   // Render all tweets
   const renderTweets = function (tweets) {
     const $container = $(".tweets-container");
-    $container.empty(); // Clear old tweets
+    $container.empty();
     for (const tweet of tweets) {
       const $tweetElement = createTweetElement(tweet);
       $container.prepend($tweetElement); 
@@ -51,31 +76,35 @@ $(document).ready(function () {
       });
   };
 
-  // Handles real tweets
+  // Initial load
   loadTweets();
 
   // Submit handler
   $("form").on("submit", function (event) {
     event.preventDefault();
+  
     const $textarea = $("#tweet-text");
     const tweetText = $textarea.val();
-
+  
+    console.log("Tweet text is:", tweetText); 
+  
     if (!tweetText.trim()) {
-      alert("Tweet cannot be empty!");
+      alert("⚠️ Tweet cannot be empty!");
       return;
     }
+  
     if (tweetText.length > 140) {
-      alert("Tweet is too long!");
+      alert("⚠️ Max 140 characters!");
       return;
     }
-
+  
     const serializedData = $(this).serialize();
-
+  
     $.post("/api/tweets", serializedData)
       .then(() => {
         $textarea.val("");
         $(".counter").text("140");
         loadTweets();
       });
-  });
+  });  
 });
