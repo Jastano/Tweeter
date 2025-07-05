@@ -22,11 +22,11 @@ $(document).ready(function () {
   // Validation function
   const isTweetValid = function(tweetText) {
     if (!tweetText.trim()) {
-      showError("⚠️ Tweet is  empty!");
+      showError("⚠️ Tweet cannot be empty!");
       return false;
     }
     if (tweetText.length > 140) {
-      showError("⚠️ Max 140 characters.");
+      showError("⚠️ Tweet exceeds 140 characters!");
       return false;
     }
     hideError();
@@ -82,29 +82,20 @@ $(document).ready(function () {
   // Submit handler
   $("form").on("submit", function (event) {
     event.preventDefault();
-  
+
     const $textarea = $("#tweet-text");
     const tweetText = $textarea.val();
-  
-    console.log("Tweet text is:", tweetText); 
-  
-    if (!tweetText.trim()) {
-      alert("⚠️ Tweet cannot be empty!");
+    if (!isTweetValid(tweetText)) {
       return;
     }
-  
-    if (tweetText.length > 140) {
-      alert("⚠️ Max 140 characters!");
-      return;
-    }
-  
+
     const serializedData = $(this).serialize();
-  
+
     $.post("/api/tweets", serializedData)
       .then(() => {
         $textarea.val("");
         $(".counter").text("140");
         loadTweets();
       });
-  });  
+  });
 });

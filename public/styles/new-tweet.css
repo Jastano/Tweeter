@@ -67,3 +67,14 @@
 .new-tweet .counter.over-limit {
   color: red;
 }
+
+/* Validation error display*/
+.error-message {
+  color: red;
+  background-color: #fdd;
+  border: 1px solid red;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: none; /* hidden by default */
+}
