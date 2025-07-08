@@ -3,38 +3,54 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ 
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
-  padding-top: 120px;
+  padding-top: 120px; /* nav height */
 }
 
-.bungee-regular {
-  font-family: 'Bungee', sans-serif;
+/* Flex layout wrapper */
+.layout {
+  display: flex;
+  flex-direction: column; /* Mobile-first: stacked */
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- .bungee-regular {
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.profile-header {
+  flex: 1;
 }
 
-main {
-  width: 90%;                   /* 90% width of body */
-  margin: 0 auto;               /* center horizontally */
-  background-color: inherit;    /* same as body background */
+main.container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+/* Desktop side by side */
+@media (min-width: 1024px) {
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-header {
+    width: 30%;
+    aspect-ratio: 1/1; /* makes profile square */
+  }
+
+  main.container {
+    width: 70%;
+    max-width: 900px;
+  
+  }
+}
+

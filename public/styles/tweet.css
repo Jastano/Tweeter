@@ -1,16 +1,18 @@
 .tweets-container {
-    width: 100%;
+  width: 100%;
 }
 
 /* Single tweet box */
 .tweet {
   width: 100%;
+  max-width: 700px;
   box-sizing: border-box;
+  margin: 0 auto;
   border: 4px solid #545149;
   border-radius: 8px;
   margin-bottom: 10px;
   padding: 30px;
-  background-color: #f4f1ec;
+  background: #f4f1ec;
   transition: box-shadow 0.2s ease;
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -30,8 +32,8 @@
 }
 
 .tweet header .left img {
-  width: 150px;
-  height:150px;
+  width: 50px;
+  height:50px;
   border-radius: 50%;
 }
 
@@ -45,9 +47,9 @@
 }
 
 .tweet p {
-  margin-top: -150px;
+  margin: 10px 0;
   font-size: 1.4em;
-  padding-bottom:20px;
+  
 }
 
 .tweet footer {

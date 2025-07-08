@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Tweeter - Home Page</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Tweeter - Home Page</title>
 
-    <!--  CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/nav.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/new-tweet.css" />
-    <link rel="stylesheet" href="styles/tweet.css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/nav.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/new-tweet.css" />
+  <link rel="stylesheet" href="styles/tweet.css" />
 
-    <!-- External JS Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <!-- JS Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
-    <!-- App JS -->
-    <script src="/scripts/client.js"></script>
-    <script src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- App JS -->
+  <script src="/scripts/client.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
+</head>
+<body>
+  <!-- Nav -->
+  <nav>
+    <span class="logo">tweeter</span>
+    <div class="nav-right">
+      <p><span class="bold-word">Write</span> a new tweet</p>
+      <i class="fa-solid fa-angle-double-down"></i>
+    </div>
+  </nav>
 
-  <body>
-    <!-- Top Nav -->
-    <nav>
-      <span class="logo">tweeter</span>
-      <div class="nav-right">
-        <p>Write a new tweet</p>
-        <i class="fa-solid fa-angle-double-down"></i>
-      </div>
-    </nav>
+  <!-- Layout -->
+  <div class="layout">
 
-    <!-- Profile Header -->
-    <header>
+    <!-- header -->
+    <header class="profile-header">
       <div>
         <img src="images/profile-hex.png" alt="Profile Avatar" />
       </div>
       <h2>Your Name</h2>
     </header>
 
-    <!-- Main Container -->
+    <!-- Main -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <div class="error-message" style="display: none;"></div>
         <form action="/api/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" ></textarea>
+          <textarea name="text" id="tweet-text"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -70,12 +65,12 @@
         </form>
       </section>
 
-      <!-- Tweets Container -->
+      <!-- Tweets -->
       <section class="tweets-container">
-      
+        <!-- Tweets will go here -->
       </section>
     </main>
-  </body>
-</html>
 
-    
+  </div>
+</body>
+</html>
