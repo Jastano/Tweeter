@@ -1,3 +1,10 @@
+/* ===================================================
+   Profile Header style
+   ---------------------------------------------------
+   Styles the profile section that displays the user's
+   avatar and name
+   ================================================== */
+
 .profile-header {
   width: 100%;
   background-color: #f4f1ec;
@@ -21,7 +28,9 @@
   font-size: 1.5em;
   color: #333;
 }
-
+/* -----------------------------------------------
+   Desktop layout
+   ----------------------------------------------- */
 @media (min-width: 1024px) {
   .profile-header {
     flex-direction: column;            

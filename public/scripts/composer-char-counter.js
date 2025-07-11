@@ -1,5 +1,9 @@
+/**
+ * composer-char-counter.js
+  * Handles live character count feedback for tweet compose form.
+ */
 $(document).ready(function() {
-  console.log("composer-char-counter.js is ready!");
+  
 
   // Listen for input on the textarea inside .new-tweet
   $('.new-tweet textarea').on('input', function() {

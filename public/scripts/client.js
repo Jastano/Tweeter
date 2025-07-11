@@ -1,5 +1,10 @@
+/**
+ * client.js
+ * Handles tweet submission, validation, rendering, and AJAX calls.
+ */
+
 $(document).ready(function () {
-  console.log("Client.js is loaded");
+  
 
   // Escape function for security
   const escape = function (str) {
@@ -99,3 +104,4 @@ $(document).ready(function () {
       });
   });
 });
+ 

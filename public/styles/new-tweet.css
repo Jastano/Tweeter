@@ -36,11 +36,18 @@
   background-color: #4056A1;
   color: #fff;
   border: none;
-  padding: 0.5em 1em;
+  padding: 10px 20px;
   font-weight: bold;
   font-family: 'Bungee', sans-serif;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
+
+.new-tweet button:hover {
+  background-color: #0d8ddb; /* darker on hover */
+}
+
 
 /* Counter style */
 .new-tweet .counter {
@@ -48,19 +55,6 @@
   font-family: 'Bungee', sans-serif;
 }
 
-.new-tweet button {
-  background-color: #4056A1; 
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.new-tweet button:hover {
-  background-color: #0d8ddb;  /* darker when you hover */
-}
 
 /* Counter turns red when over limit */
 .new-tweet .counter.over-limit {
