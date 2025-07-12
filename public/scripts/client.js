@@ -37,7 +37,22 @@ $(document).ready(function () {
     hideError();
     return true;
   };
-
+  
+  //Interactive Nav
+  $('.nav-right').on('click', function() {
+    const $newTweet = $('.new-tweet');
+    const $arrow = $(this).find('i');
+  
+    // Slide toggle the form
+    $newTweet.slideToggle('slow', function() {
+      // Focus the textarea when visible
+      if ($newTweet.is(':visible')) {
+        $('#tweet-text').focus();
+      }
+    });
+  });
+  
+  
   // Build a tweet 
   const createTweetElement = function (tweet) {
     const $tweet = $(`

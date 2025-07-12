@@ -16,6 +16,8 @@ nav {
 
 .logo {
   font-family: 'Bungee', sans-serif;
+  font-size: 2rem;
+
 }
 
 .nav-right {
@@ -35,6 +37,7 @@ nav {
   font-size: 1.2em;
   color: red;
 }
+
 
 .bold-word {
   font-weight: bold;
