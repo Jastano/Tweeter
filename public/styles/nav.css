@@ -38,6 +38,17 @@ nav {
   color: red;
 }
 
+@keyframes bounce { /*Animate Arrow to bounce*/
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.nav-right i.bounce {
+  display: inline-block;
+  animation: bounce 0.8s infinite;
+}
+
 
 .bold-word {
   font-weight: bold;
